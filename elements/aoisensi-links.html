@@ -1,0 +1,171 @@
+
+<link href="/components/polymer/polymer.html" rel="import"/>
+<link href="/components/iron-list/iron-list.html" rel="import"/>
+<link href="/components/paper-card/paper-card.html" rel="import"/>
+<link href="/components/iron-image/iron-image.html" rel="import"/>
+<dom-module id="aoisensi-links">
+  <template>
+    <style>
+      .content {
+        flex-wrap: wrap;
+        padding: 8px;
+      }
+      paper-card {
+        margin: 8px;
+        height: 192px;
+        width: 192px;
+      }
+      .title {
+        font-size: 24px;
+        padding: 16px;
+      }
+      .icon {
+        display: block;
+        height: 64px;
+        width: 96px;
+        max-height: 64px;
+        max-width: 96px;
+        margin: 32px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+    <div class="content">
+      <template is="dom-repeat" items="{{links}}"><a href="{{item.href}}" target="_blank">
+          <paper-card><img src="{{item.logo}}" class="icon"/>
+            <div class="title">{{item.name}}</div>
+          </paper-card></a></template>
+    </div>
+  </template>
+  <script>(function() {
+  Polymer({
+    is: 'aoisensi-links',
+    properties: {
+      links: {
+        value: [
+          {
+            name: 'Twitter',
+            href: 'https://twitter.com/aoisensi',
+            logo: '/images/svgporn/twitter.svg'
+          }, {
+            name: 'Steam',
+            href: 'http://steamcommunity.com/id/aoisensi/',
+            logo: '/images/svgporn/steam.svg'
+          }, {
+            name: 'tumblr',
+            href: 'http://tumblr.aoisensi.info/',
+            logo: '/images/svgporn/tumblr-icon.svg'
+          }, {
+            name: 'GitHub',
+            href: 'https://github.com/aoisensi',
+            logo: '/images/svgporn/github-icon.svg'
+          }, {
+            name: 'BitBucket',
+            href: 'https://bitbucket.org/aoisensi/',
+            logo: '/images/svgporn/bitbucket.svg'
+          }, {
+            name: 'Cloud9',
+            href: 'https://c9.io/aoisensi',
+            logo: '/images/svgporn/cloud9.svg'
+          }, {
+            name: 'Discord',
+            href: 'https://discord.me/aoisensi',
+            logo: '/images/svgporn/discord.svg'
+          }, {
+            name: 'Cloud9',
+            href: 'https://c9.io/aoisensi',
+            logo: '/images/svgporn/cloud9.svg'
+          }, {
+            name: 'DeviantArt',
+            href: 'http://aoisensi.deviantart.com/',
+            logo: '/images/svgporn/deviantart.svg'
+          }, {
+            name: 'ello',
+            href: 'https://ello.co/aoisensi',
+            logo: '/images/svgporn/ello.svg'
+          }, {
+            name: 'Facebook',
+            href: 'https://facebook.com/aoisensi',
+            logo: '/images/svgporn/facebook.svg'
+          }, {
+            name: 'ifttt',
+            href: 'https://ifttt.com/p/aoisensi',
+            logo: '/images/svgporn/ifttt.svg'
+          }, {
+            name: 'Instagram',
+            href: 'https://instagram.com/aoisensi',
+            logo: '/images/svgporn/instagram-icon.svg'
+          }, {
+            name: 'KickStarter',
+            href: 'https://www.kickstarter.com/profile/aoisensi',
+            logo: '/images/svgporn/kickstarter.svg'
+          }, {
+            name: 'linkedin',
+            href: 'https://www.linkedin.com/in/aoisensi',
+            logo: '/images/svgporn/linkedin.svg'
+          }, {
+            name: 'medium',
+            href: 'https://medium.com/@aoisensi',
+            logo: '/images/svgporn/medium.svg'
+          }, {
+            name: 'npm',
+            href: 'https://www.npmjs.com/~aoisensi',
+            logo: '/images/svgporn/npm.svg'
+          }, {
+            name: 'BATTLELOG',
+            href: 'http://battlelog.battlefield.com/bf4/user/aoisensi/',
+            logo: '/images/svgporn/origin.svg'
+          }, {
+            name: 'Patreon',
+            href: 'https://www.patreon.com/aoisensi',
+            logo: '/images/svgporn/patreon.svg'
+          }, {
+            name: 'reddit',
+            href: 'https://www.reddit.com/user/aoisensi/',
+            logo: '/images/svgporn/reddit.svg'
+          }, {
+            name: 'Skype',
+            href: 'skype:aoisensi?add',
+            logo: '/images/svgporn/skype.svg'
+          }, {
+            name: 'soundcloud',
+            href: 'https://soundcloud.com/aoisensi',
+            logo: '/images/svgporn/soundcloud.svg'
+          }, {
+            name: 'stackoverflow',
+            href: 'http://stackoverflow.com/users/7257132/aoisensi',
+            logo: '/images/svgporn/stackoverflow.svg'
+          }, {
+            name: 'Travis CI',
+            href: 'https://travis-ci.org/profile/aoisensi',
+            logo: '/images/svgporn/travis-ci.svg'
+          }, {
+            name: 'twitch',
+            href: 'https://www.twitch.tv/aoisensi',
+            logo: '/images/svgporn/twitch.svg'
+          }, {
+            name: 'vimeo',
+            href: 'https://vimeo.com/aoisensi',
+            logo: '/images/svgporn/vimeo-icon.svg'
+          }, {
+            name: 'WordPress',
+            href: 'https://aoisensi.wordpress.com/',
+            logo: '/images/svgporn/wordpress-icon.svg'
+          }, {
+            name: 'YouTube',
+            href: 'https://www.youtube.com/aoisensi',
+            logo: '/images/svgporn/youtube.svg'
+          }
+        ]
+      }
+    }
+  });
+
+}).call(this);
+
+  </script>
+</dom-module>

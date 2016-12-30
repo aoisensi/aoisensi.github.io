@@ -1,0 +1,46 @@
+
+<link href="/components/polymer/polymer.html" rel="import"/>
+<link href="/components/paper-card/paper-card.html" rel="import"/>
+<link href="/components/iron-list/iron-list.html" rel="import"/>
+<link href="/components/paper-item/paper-icon-item.html" rel="import"/>
+<link href="/components/iron-icon/iron-icon.html" rel="import"/>
+<link href="/components/iron-icons/iron-icons.html" rel="import"/>
+<link href="/components/iron-icons/social-icons.html" rel="import"/>
+<link href="/components/iron-icons/maps-icons.html" rel="import"/>
+<dom-module id="aoisensi-about">
+  <template>
+    <style>
+      paper-card {
+        display: block;
+        margin: 32px;
+      }
+    </style>
+    <paper-card>
+      <iron-list class="content">
+        <paper-icon-item class="item">
+          <iron-icon icon="icons:account-circle" item-icon="item-icon"></iron-icon>aoisensi
+        </paper-icon-item>
+        <paper-icon-item class="item">
+          <iron-icon icon="social:cake" item-icon="item-icon"></iron-icon>January 3, 1996
+        </paper-icon-item>
+        <paper-icon-item class="item">
+          <iron-icon icon="maps:person-pin-circle" item-icon="item-icon"></iron-icon>Kobe, Hyogo, Japan
+        </paper-icon-item>
+        <paper-icon-item class="item">
+          <iron-icon icon="icons:accessibility" item-icon="item-icon"></iron-icon>Male
+        </paper-icon-item>
+        <paper-icon-item class="item">
+          <iron-icon icon="social:public" item-icon="item-icon"></iron-icon>Japanese and Simple English
+        </paper-icon-item>
+      </iron-list>
+    </paper-card>
+  </template>
+  <script>(function() {
+  Polymer({
+    is: 'aoisensi-about'
+  });
+
+}).call(this);
+
+  </script>
+</dom-module>

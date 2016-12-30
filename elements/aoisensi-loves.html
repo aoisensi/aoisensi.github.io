@@ -1,0 +1,47 @@
+
+<link href="/components/polymer/polymer.html" rel="import"/>
+<link href="/components/paper-card/paper-card.html" rel="import"/>
+<link href="/components/iron-list/iron-list.html" rel="import"/>
+<link href="/components/paper-item/paper-item.html" rel="import"/>
+<link href="/components/iron-icon/iron-icon.html" rel="import"/>
+<link href="/components/iron-icons/iron-icons.html" rel="import"/>
+<link href="/components/iron-icons/social-icons.html" rel="import"/>
+<link href="/components/iron-icons/maps-icons.html" rel="import"/>
+<dom-module id="aoisensi-loves">
+  <template>
+    <style>
+      paper-card {
+        display: block;
+        margin: 32px;
+      }
+      h2 {
+        margin: 16px;
+      }
+    </style>
+    <paper-card>
+      <h2>Comuter</h2>
+      <iron-list class="content"><a href="https://golang.org/" target="_blank">
+          <paper-item>Golang</paper-item></a><a href="https://www.unrealengine.com/" target="_blank">
+          <paper-item>Unreal Engine 4</paper-item></a><a href="https://www.archlinux.org/" target="_blank">
+          <paper-item>Arch Linux</paper-item></a><a href="https://www.polymer-project.org/" target="_blank">
+          <paper-item>Polymer</paper-item></a></iron-list>
+    </paper-card>
+    <paper-card>
+      <h2>Game</h2>
+      <iron-list class="content"><a href="http://dota2.com/" target="_blank">
+          <paper-item>Dota 2</paper-item></a><a href="http://www.teamfortress.com/" target="_blank">
+          <paper-item>Team Fortress 2</paper-item></a><a href="http://www.thinkwithportals.com/" target="_blank">
+          <paper-item>Portal</paper-item></a><a href="http://www.killingfloor2.com/" target="_blank">
+          <paper-item>Killing Floor 2</paper-item></a><a href="https://www.epicgames.com/paragon" target="_blank">
+          <paper-item>Paragon</paper-item></a></iron-list>
+    </paper-card>
+  </template>
+  <script>(function() {
+  Polymer({
+    is: 'aoisensi-loves'
+  });
+
+}).call(this);
+
+  </script>
+</dom-module>
