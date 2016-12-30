@@ -1,0 +1,50 @@
+link(href='/components/polymer/polymer.html', rel='import')
+link(href='/components/paper-card/paper-card.html', rel='import')
+link(href='/components/iron-image/iron-image.html', rel='import')
+link(href='/components/iron-media-query/iron-media-query,html', rel='import')
+
+dom-module#aoisensi-index
+  template
+    style.
+      paper-card {
+        display: block;
+        margin: 32px;
+        padding: 32px;
+      }
+      .content, .top {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .top.mini {
+        flex-direction: row;
+      }
+      .icon {
+        border-radius: 50%;
+      }
+      p {
+        margin: 0;
+      }
+    iron-media-query(query='(max-width: 720px)' query-matches='{{mini}}')
+    paper-card
+      .content
+        template(is='dom-if', if='{{!mini}}')
+          .top
+            iron-image.icon(style="width:192px; height:192px;", sizing="cover", src="/aoisensi.png")
+            h1 aoisensi's HomePage
+        template(is='dom-if', if='{{mini}}')
+          .top.mini
+            iron-image.icon(style="width:96px; height:96px; margin-right: 32px;", sizing="cover", src="/aoisensi.png")
+            h1 aoisensi's <br> HomePage
+
+        p hi, I'm aoisnsi.
+        br
+        p Welcome to my third website!
+        p I'm noob gamer and noob programmer.
+        p Even so, I love both so much!!
+  script
+    :coffee-script
+      Polymer
+        is: 'aoisensi-index'
+

@@ -1,0 +1,15 @@
+{
+  "name": "aoisensi.info",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.7.1",
+    "app-layout": "PolymerElements/app-layout#^0.10.6",
+    "app-route": "PolymerElements/app-route#^0.9.3",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.8",
+    "iron-selector": "PolymerElements/iron-selector#^1.5.2",
+    "iron-icons": "PolymerElements/iron-icons#^1.2.0",
+    "paper-toolbar": "PolymerElements/paper-toolbar#^1.1.7",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "normalize-css": "^5.0.0"
+  }
+}

@@ -1,0 +1,81 @@
+link(href='/components/polymer/polymer.html', rel='import')
+link(href='/components/app-layout/app-drawer/app-drawer.html', rel='import')
+link(href='/components/app-layout/app-drawer-layout/app-drawer-layout.html', rel='import')
+link(href='/components/app-layout/app-header/app-header.html', rel='import')
+link(href='/components/app-layout/app-header-layout/app-header-layout.html', rel='import')
+link(href='/components/app-layout/app-scroll-effects/app-scroll-effects.html', rel='import')
+link(href='/components/paper-toolbar/paper-toolbar.html', rel='import')
+link(href='/components/app-route/app-location.html', rel='import')
+link(href='/components/app-route/app-route.html', rel='import')
+link(href='/components/iron-pages/iron-pages.html', rel='import')
+link(href='/components/iron-selector/iron-selector.html', rel='import')
+link(href='/components/paper-item/paper-icon-item.html', rel='import')
+link(href='/components/iron-icon/iron-icon.html', rel='import')
+link(href='/components/paper-icon-button/paper-icon-button.html', rel='import')
+link(href='/components/iron-icons/iron-icons.html', rel='import')
+link(href='/components/iron-icons/social-icons.html', rel='import')
+
+dom-module#aoisensi-body
+  template
+    style.
+      :host {
+        display: block;
+        --app-primary-color: #4285f4;
+        --app-secondary-color: black;
+      }
+      app-header {
+        color: #fff;
+        background-color: var(--app-primary-color);
+      }
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+        line-height: 40px;
+      }
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
+    app-location(route='{{route}}')
+    app-route(route='{{route}}', pattern='/:page', data='{{routeData}}')
+    app-drawer-layout(fullbleed)
+      app-drawer#drawer
+        iron-selector.drawer-list(selected='[[page]]', attr-for-selected='name', role='navigation')
+          a(name='index', href='/')
+            paper-icon-item
+              iron-icon(icon='icons:home', item-icon)
+              | Index
+          a(name='about', href='/about')
+            paper-icon-item
+              iron-icon(icon='icons:face', item-icon)
+              | About
+          a(name='links', href='/links')
+            paper-icon-item
+              iron-icon(icon='social:share', item-icon)
+              | Links
+          a(name='loves', href='/loves')
+            paper-icon-item
+              iron-icon(icon='icons:favorite', item-icon)
+              | Loves
+          a(name='think', href='/think')
+            paper-icon-item
+              iron-icon(icon='icons:android', item-icon)
+              | Think
+
+      app-header-layout(has-scrolling-region)
+        app-header(condenses, reveals, effects='waterfall')
+          paper-toolbar
+            paper-icon-button(icon='icons:menu', drawer-toggle)
+            div(main-title) aoisensi.info
+        main(role='main')
+          iron-pages(selected='[[page]]', attr-for-selected='name', fallback-selection='notfound')
+            aoisensi-index(name='index')
+            aoisensi-about(name='about')
+            aoisensi-links(name='links')
+            aoisensi-loves(name='loves')
+            aoisensi-think(name='think')
+  script
+    include:coffee-script aoisensi-body.coffee
+

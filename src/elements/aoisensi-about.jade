@@ -1,0 +1,39 @@
+link(href='/components/polymer/polymer.html', rel='import')
+link(href='/components/paper-card/paper-card.html', rel='import')
+link(href='/components/iron-list/iron-list.html', rel='import')
+link(href='/components/paper-item/paper-icon-item.html', rel='import')
+link(href='/components/iron-icon/iron-icon.html', rel='import')
+link(href='/components/iron-icons/iron-icons.html', rel='import')
+link(href='/components/iron-icons/social-icons.html', rel='import')
+link(href='/components/iron-icons/maps-icons.html', rel='import')
+
+dom-module#aoisensi-about
+  template
+    style.
+      paper-card {
+        display: block;
+        margin: 32px;
+      }
+    paper-card
+      iron-list.content
+        paper-icon-item.item
+          iron-icon(icon='icons:account-circle', item-icon)
+          | aoisensi
+        paper-icon-item.item
+          iron-icon(icon='social:cake', item-icon)
+          | January 3, 1996
+        paper-icon-item.item
+          iron-icon(icon='maps:person-pin-circle', item-icon)
+          | Kobe, Hyogo, Japan
+        paper-icon-item.item
+          iron-icon(icon='icons:accessibility', item-icon)
+          | Male
+        paper-icon-item.item
+          iron-icon(icon='social:public', item-icon)
+          | Japanese and Simple English
+
+  script
+    :coffee-script
+      Polymer
+        is: 'aoisensi-about'
+

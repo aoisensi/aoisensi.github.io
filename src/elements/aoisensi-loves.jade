@@ -1,0 +1,59 @@
+link(href='/components/polymer/polymer.html', rel='import')
+link(href='/components/paper-card/paper-card.html', rel='import')
+link(href='/components/iron-list/iron-list.html', rel='import')
+link(href='/components/paper-item/paper-item.html', rel='import')
+link(href='/components/iron-icon/iron-icon.html', rel='import')
+link(href='/components/iron-icons/iron-icons.html', rel='import')
+link(href='/components/iron-icons/social-icons.html', rel='import')
+link(href='/components/iron-icons/maps-icons.html', rel='import')
+
+dom-module#aoisensi-loves
+  template
+    style.
+      paper-card {
+        display: block;
+        margin: 32px;
+      }
+      h2 {
+        margin: 16px;
+      }
+    paper-card
+      h2 Comuter
+      iron-list.content
+        a(href='https://golang.org/', target='_blank')
+          paper-item
+            | Golang
+        a(href='https://www.unrealengine.com/', target='_blank')
+          paper-item
+            | Unreal Engine 4
+        a(href='https://www.archlinux.org/', target='_blank')
+          paper-item
+            | Arch Linux
+        a(href='https://www.polymer-project.org/', target='_blank')
+          paper-item
+            | Polymer
+    paper-card
+      h2 Game
+      iron-list.content
+        a(href='http://dota2.com/', target='_blank')
+          paper-item
+            | Dota 2
+        a(href='http://www.teamfortress.com/', target='_blank')
+          paper-item
+            | Team Fortress 2
+        a(href='http://www.thinkwithportals.com/', target='_blank')
+          paper-item
+            | Portal
+        a(href='http://www.killingfloor2.com/', target='_blank')
+          paper-item
+            | Killing Floor 2
+        a(href='https://www.epicgames.com/paragon', target='_blank')
+          paper-item
+            | Paragon
+
+
+  script
+    :coffee-script
+      Polymer
+        is: 'aoisensi-loves'
+
